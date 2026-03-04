@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Anna Moura</title>
+
+  <link rel="icon" src="https://github.com/gringatinas/privacy/issues/1#issue-4014984627" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* ===== HEADER CINZA ===== */
+.top-header{
+  height:60px;
+  background:#1C1C1C;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+  
+  .logo{
+  height:60px;
+  opacity:0.95;
+}
+
+/* ===== CARD BASE ===== */
+.card{
+  background:#0D0D0D;
+  margin:16px;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+/* ===== BLOCO 1 ===== */
+
+.cover{
+  height:160px;
+  overflow:hidden;
+}
+
+.cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.profile-area{
+  padding:0 16px 20px;
+}
+
+.profile-header{
+  display:flex;
+  align-items:flex-end;
+  gap:14px;
+  margin-top:-45px; /* metade da foto (90px / 2) */
+  position:relative;
+  z-index:2;
+}
+
+.profile-wrapper{
+  position:relative;
+  width:90px;
+  height:90px;
+}
+
+.profile-img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:4px solid #000;
+  background:#000;
+}
+.online-status{
+  position:absolute;
+  bottom:6px;
+  right:6px;
+  width:16px;
+  height:16px;
+  background:#00D26A;
+  border:3px solid #000;
+  border-radius:50%;
+}
+  
+.name-row{
+  font-size:18px;
+  font-weight:600;
+}
+
+.verified{
+  color:#ff8c5a;
+  font-size:14px;
+}
+
+.username{
+  font-size:13px;
+  color:#8A8A8A;
+  margin-top:4px;
+}
+
+.description{
+  font-size:14px;
+  line-height:1.4;
+  color:#CFCFCF;
+  margin-top:14px;
+}
+  
+.read-more{
+  color:#ff8c5a;
+  cursor:pointer;
+  font-weight:500;
+  margin-left:4px;
+}
+
+.content-stats{
+  display:flex;
+  gap:20px;
+  margin-top:12px;
+  font-size:12px;
+  color:#9A9A9A;
+  align-items:center;
+}
+
+.content-stats div{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.content-stats svg{
+  width:15px;
+  height:15px;
+  stroke:#9A9A9A;
+  fill:none;
+  stroke-width:2;
+}
+
+/* ===== LOCALIZAÇÃO ===== */
+
+.city{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  font-size:13px;
+  color:#A0A0A0;
+}
+
+.city svg{
+  width:18px;
+  height:18px;
+  stroke:#ff8c5a;
+  stroke-width:2;
+  fill:none;
+}
+
+/* ===== REDES SOCIAIS ===== */
+
+.socials{
+  display:flex;
+  gap:16px;
+  margin-top:14px;
+}
+
+.social-icon{
+  width:34px;
+  height:34px;
+  background:#1A1A1A;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.social-icon:hover{
+  transform:scale(1.1);
+}
+
+.social-icon svg{
+  width:18px;
+  height:18px;
+  fill:#ff8c5a;
+}
+
+/* ===== BOTÕES ===== */
+
+.actions{
+  display:flex;
+  gap:12px;
+  margin-top:18px;
+}
+
+.btn{
+  flex:1;
+  height:44px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-mimo{
+  background:linear-gradient(90deg,#ff8c5a,#ffb199);
+  color:#000;
+}
+
+.btn-chat{
+  background:#1A1A1A;
+  border:1px solid #262626;
+}
+
+/* ===== BLOCO 2 ===== */
+
+.section-title{
+  font-size:16px;
+  font-weight:600;
+  padding:16px;
+}
+
+.plan{
+  height:64px;
+  margin:0 16px 12px;
+  padding:0 18px;
+  border-radius:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(90deg,#ff8c5a,#ffb199);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ===== BLOCO 3 ===== */
+
+.post-stats{
+  display:flex;
+  justify-content:space-between;
+  padding:16px;
+  font-size:13px;
+  color:#9A9A9A;
+}
+
+.mini-profile{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0 16px 12px;
+}
+
+.mini-profile img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+.mini-name{
+  font-size:14px;
+  font-weight:600;
+}
+
+.mini-user{
+  font-size:12px;
+  color:#8A8A8A;
+}
+
+.locked-post{
+  height:220px;
+  margin:0 16px 16px;
+  border-radius:16px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+/* CADEADO PREMIUM */
+
+.lock-icon{
+  opacity:0.3;
+}
+
+.lock-icon svg{
+  width:70px;
+  height:70px;
+  stroke:#000;
+  stroke-width:2;
+  fill:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+ <img src="https://github.com/user-attachments/assets/4a018ce7-e193-4bc1-b5be-f346a52ccaf7" alt="Logo" class="logo">
+</div>
+
+<!-- BLOCO 1 -->
+<div class="card">
+  <div class="cover">
+  <img src="https://github.com/user-attachments/assets/a2fc958c-5fcb-4c23-bf90-fbb706102f8b" alt="Capa">
+</div>
+  <div class="profile-area">
+
+    <div class="profile-header">
+      <img src="https://github.com/user-attachments/assets/e60877a0-9ee9-4be5-84dc-0dfab13a8967" class="profile-img" alt="Perfil">
+      <div>
+        <div class="name-row">Anna Moura <span class="verified">✔</span></div>
+        <div class="username">@mourao_anninha</div>
+      </div>
+    </div>
+
+   <div class="description">
+      <span id="shortText">Olá amores!!! Me chamo Anna Moura, Tenho 20 aninhos, 70kg e 1,69 de altura...</span>
+      <span id="fullText" style="display:none;">
+        Olá amores!!! Me chamo Duda santos, Tenho 24 aninhos, 70kg e 1,69 de altura?? Sou uma ninfetinha submissa e bem safada... Sejam bem vindos(a) ao meu mundo de fantasia, onde postarei fotos e videos sensuais e explícitos +18 - Videos de sexo, com brinquedos, conteúdo, fotos safadas, em várias posições! Sou brasileira, morena. Posso ser doce e safada!  o que você mais gosta? Bom espero que gostem dos dois ! Eu quero interagir com você! Vou responder todas as suas mensagens, você é minha prioridade! 
+      </span>
+      <span class="read-more" onclick="toggleText()" id="toggleBtn">Ler mais</span>
+    </div>
+
+    <div class="content-stats">
+      <div>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+        283
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12"/></svg>
+        470
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a4 4 0 018-1 4 4 0 018 1c0 5.65-7 10-7 10z"/></svg>
+        293K
+      </div>
+    </div>
+
+    <div class="city">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z"/>
+        <circle cx="12" cy="11" r="2.5"/>
+      </svg>
+      São Paulo - SP
+    </div>
+
+   <div class="socials">
+
+  <a href="https://instagram.com/mourao_anninha" target="_blank" class="social-icon">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+    </svg>
+  </a>
+
+</div>
+    <div class="actions">
+      <div class="btn btn-mimo" onclick="window.location.href='https://syncpagamentoseguro.com/checkout/a137438a-ee10-4161-9f4b-8da5aed2f5ad+a13699b0-9891-4b38-912c-d392e0d0a31f'"> Mimo</div>
+      <div class="btn btn-chat" onclick="window.location.href='https://instagram.com/mourao_anninha'"> Chat</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BLOCO 2 -->
+<div class="card">
+  <div class="section-title">Assinaturas</div>
+  <div class="plan" onclick="window.location.href='https://syncpagamentoseguro.com/checkout/a137438a-ee10-4161-9f4b-8da5aed2f5ad+a13699b0-9891-4b38-912c-d392e0d0a31f'">
+    1 Mês <span>R$ 9,96</span>
+  </div>
+   <div class="section-title">Promoções</div>
+  <div class="plan" onclick="window.location.href='https://syncpagamentoseguro.com/checkout/a1374468-38d6-4bef-b65d-a281394114a1+a13699b0-9891-4b38-912c-d392e0d0a31f'">
+    6 Meses Promo <span>R$ 14,99</span>
+  </div>
+  <div class="plan" onclick="window.location.href='https://syncpagamentoseguro.com/checkout/a13744a4-9134-4b24-a819-dc58c9696e7d+a13699b0-9891-4b38-912c-d392e0d0a31f'">
+    12 Meses VIP <span>R$ 20,00</span>
+  </div>
+</div>
+
+<!-- BLOCO 3 -->
+<div class="card">
+  <div class="post-stats">
+    <span>105 Postagens</span>
+    <span>265 Mídias</span>
+  </div>
+
+  <div class="mini-profile">
+    <img src="https://github.com/user-attachments/assets/a2fc958c-5fcb-4c23-bf90-fbb706102f8b" alt="Perfil Mini">
+    <div>
+      <div class="mini-name">Anna Moura <span class="verified">✔</span></div>
+      <div class="mini-user">@mourao_anninha</div>
+    </div>
+  </div>
+
+  <div class="locked-post">
+    <div class="lock-icon">
+      <svg viewBox="0 0 24 24">
+        <rect x="5" y="11" width="14" height="10" rx="2"/>
+        <path d="M8 11V8a4 4 0 118 0v3"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<script>
+function toggleText(){
+  var shortText = document.getElementById("shortText");
+  var fullText = document.getElementById("fullText");
+  var btn = document.getElementById("toggleBtn");
+
+  if(fullText.style.display === "none"){
+    fullText.style.display = "inline";
+    shortText.style.display = "none";
+    btn.innerText = "Ver menos";
+  }else{
+    fullText.style.display = "none";
+    shortText.style.display = "inline";
+    btn.innerText = "Ver mais";
+  }
+}
+</script>
+</body>
+</html>
